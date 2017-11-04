@@ -1,0 +1,19 @@
+{
+  "name": "hackpsu",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielKovalevich/HackPSU-2017-Fall.git"
+  },
+  "author": "Daniel Kovalevich, Conrad Weiser, Ryan Seipp, Matt Kerner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielKovalevich/HackPSU-2017-Fall/issues"
+  },
+  "homepage": "https://github.com/DanielKovalevich/HackPSU-2017-Fall#readme"
+}
