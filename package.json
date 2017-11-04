@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,17 @@
   "bugs": {
     "url": "https://github.com/DanielKovalevich/HackPSU-2017-Fall/issues"
   },
-  "homepage": "https://github.com/DanielKovalevich/HackPSU-2017-Fall#readme"
+  "homepage": "https://github.com/DanielKovalevich/HackPSU-2017-Fall#readme",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "^2.5.7",
+    "eslint": "^4.10.0",
+    "express": "~4.15.5",
+    "jade": "^1.11.0",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.12.1",
+    "serve-favicon": "~2.4.5"
+  }
 }
