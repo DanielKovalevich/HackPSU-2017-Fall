@@ -11,6 +11,7 @@ app.set('port', 3000);
 //for our static assets
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 // Listen for requests
 var server = app.listen(app.get('port'), function () {
   console.log('The server is running on http://localhost:' + app.get('port'));
