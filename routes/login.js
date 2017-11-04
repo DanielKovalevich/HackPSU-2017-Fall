@@ -9,16 +9,14 @@ router.get('/', function(req, res, next) {
 
   async () => {
     try {
-        const pool = await sql.connect('mssql://username:password@localhost/database')
-        const result = await sql.query`select * from mytable where id = ${value}`
+        const pool = await sql.connect('mssql://root:admin@localhost/game')
+        const result = await sql.query(`select * from UserTable`);
         console.dir(result)
     } catch (err) {
-      
+      console.log('Error: ' + err);
     }
   }
-  res.json([{
-    id: 1,
-    username: "Daniel"}]);
+  res.json({message: 'Fuck off'});
 });
 
 module.exports = router;
