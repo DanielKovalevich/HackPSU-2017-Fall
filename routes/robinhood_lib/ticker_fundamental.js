@@ -23,7 +23,7 @@ function getTickerQuoteJson(stockSymbol, callback) {
 function getTickerFundamentalJson(stockSymbol, callback) {
 
     request({
-        url: 'https://api.robinhood.com/fundamentals' + stockSymbol + '/', //URL to hit
+        url: 'https://api.robinhood.com/fundamentals/?symbols=' + stockSymbol, //URL to hit
         method: 'GET', // specify the request type
     }, function (error, response, body) {
         if (error) {
@@ -31,7 +31,7 @@ function getTickerFundamentalJson(stockSymbol, callback) {
         } else {
             console.log('Debug Robinhood response for FundamentalJson:');
             console.log(response.statusCode, body);
-            
+
             //Convert the response into a JsonObject and return it
             callback(JSON.parse(response));
         }
@@ -43,7 +43,7 @@ function updateTickerDatabaseEntry(stockSymbol) {
     //See the following documentation on what is returned in the below object
     //https://github.com/sanko/Robinhood/blob/master/Fundamentals.md
 
-    
+
     var tickerQuotes = getTickerQuoteJson(stockSymbol, (quoteResponse) => {
 
         var tickerFundamental = getTickerFundamentalJson(stockSymbol, (fundamentalResponse) => {
@@ -68,6 +68,3 @@ function updateTickerDatabaseEntry(stockSymbol) {
     });
 
 }
-
-
-
