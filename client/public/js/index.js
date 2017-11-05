@@ -37,18 +37,12 @@ function getCurrentUserData() {
 function getGraphData() {
     $.ajax({
         url: "graphData",
-        type: "get",
+        type: "post",
+        data: 'appl',
         // Manipulate data here.
         success: function(data) {
             console.log(data);
-            $('#userTitle').html(data.username);
-
-            var stocks = data.stocks.split(",");
-            var shares = data.stock_shares.split(",");
-
-            for(var i = 0; i < stocks.length; i++) {
-                $('#stock-body').append('<tr><td>' + stocks[i] + '</td><td> TESTING </td><td>' + shares[i] + '</td></tr>');
-            }
+            
         },
         error: function (req, text_status, error) {
             console.log('Error: ' + error.message);

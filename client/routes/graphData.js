@@ -1,21 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    var userInfo = {
-        "username": process.env.USERNAME,
-        "starting": process.env.STARTING,
-        "avaliable": process.env.AVALIABLE,
-        "invested": process.env.INVESTED,
-        "netProfit": process.env.NET_PROFIT,
-        "unique": process.env.UNIQUE,
-        "totalShares": process.env.TOTAL_SHARE,
-        "stocks": process.env.STOCKS,
-        "stock_shares": process.env.STOCK_SHARES,
-    }
+var ticker = require('../public/js/utilities/tickerHandler');
 
-    res.send(userInfo);
+/* GET home page. */
+router.post('/', function(req, res, next) {
+    console.log(req);
+    ticker.getHistoricalTickerInformation(req.body.ticker, (history) => {
+        var test = {'history': history}
+        res.send(test);
+    });
 });
 
 module.exports = router;

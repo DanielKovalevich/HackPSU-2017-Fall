@@ -1,6 +1,6 @@
 var db = require('./database.js');
 
-function getHistoricalTickerInformation(symbol, callback) {
+app.getHistoricalTickerInformation = function(symbol, callback) {
 
     var query = "SELECT * FROM tickertable WHERE symbol = \"" + symbol + "\" ORDER BY date DESC LIMIT 20;"
 
@@ -37,3 +37,4 @@ function getHistoricalTickerInformation(symbol, callback) {
 
 }
 
+module.exports = app;
