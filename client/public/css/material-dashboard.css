@@ -618,6 +618,10 @@ h2.title {
   margin-left: 25%;
 }
 
+.whatif li {
+  list-style-type: none;
+}
+
 .description,
 .card-description,
 .footer-big p {
