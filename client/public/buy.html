@@ -112,10 +112,10 @@
             </nav>
             <div class="content">
                 <div class="container-fluid">
-                    
+
                     <div class="container">
                         <div class="card">
-                            <div class="card-header" data-background-color="orange">
+                            <div class="card-header" data-background-color="green">
                                 <div class="row">
                                     <div class="col-lg-4 col-lg-offset-4">
                                         <input type="search" id="search" value="" class="form-control" placeholder="Search Stock Tickers">
@@ -123,7 +123,7 @@
                                 </div>
                             </div>
                             <div class="card-content table-responsive">
-                                
+
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <table class="table" id="table">
@@ -142,7 +142,7 @@
                                                     <td>jQuery</td>
                                                     <td>Searchable</td>
                                                     <td>
-                                                        <input type="text" id="amount">                                                    
+                                                        <input type="text" id="amount">
                                                     </td>
                                                     <td>
                                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
@@ -155,26 +155,102 @@
                                                     <td>Ipsum</td>
                                                     <td>Dolor</td>
                                                     <td>
-                                                        <input type="text" id="amount">                                                    
+                                                        <input type="text" id="amount">
                                                     </td>
                                                     <td>
                                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                                                             Buy
                                                         </button>
-                                                    </td>                                               
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Some</td>
                                                     <td>More</td>
                                                     <td>Data</td>
                                                     <td>
-                                                        <input type="text" id="amount">                                                    
+                                                        <input type="text" id="amount">
                                                     </td>
                                                     <td>
                                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                                                             Buy
                                                         </button>
-                                                    </td>                                           
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <hr>
+                                    </div>
+                                </div>
+                            <script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="container-fluid">
+
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-header" data-background-color="red">
+                                <div class="row">
+                                    <div class="col-lg-4 col-lg-offset-4">
+                                        <input type="search" id="search" value="" class="form-control" placeholder="Search Stock Tickers">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content table-responsive">
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <table class="table" id="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Stock Ticker</th>
+                                                    <th>Price</th>
+                                                    <th>Number of Shares</th>
+                                                    <th>Amount</th>
+                                                    <th>Button</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Introducing</td>
+                                                    <td>jQuery</td>
+                                                    <td>Searchable</td>
+                                                    <td>
+                                                        <input type="text" id="amount">
+                                                    </td>
+                                                    <td>
+                                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                                            Sell
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Lorem</td>
+                                                    <td>Ipsum</td>
+                                                    <td>Dolor</td>
+                                                    <td>
+                                                        <input type="text" id="amount">
+                                                    </td>
+                                                    <td>
+                                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                                            Sell
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Some</td>
+                                                    <td>More</td>
+                                                    <td>Data</td>
+                                                    <td>
+                                                        <input type="text" id="amount">
+                                                    </td>
+                                                    <td>
+                                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                                            Sell
+                                                        </button>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -200,7 +276,7 @@
         evenRow: { 'background-color': '#fff' },
         searchType: 'fuzzy'
     });
-    
+
     $( '#searchable-container' ).searchable({
         searchField: '#container-search',
         selector: '.row',
