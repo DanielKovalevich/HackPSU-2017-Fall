@@ -124,7 +124,7 @@
 
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <table class="table" id="table">
+                                        <table class="table" id="table1">
                                             <thead>
                                                 <tr>
                                                     <th>Stock Ticker</th>
@@ -200,7 +200,7 @@
 
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <table class="table" id="table">
+                                        <table class="table" id="table2">
                                             <thead>
                                                 <tr>
                                                     <th>Stock Ticker</th>
@@ -229,7 +229,7 @@
 
 <script>
     $(function () {
-    $( '#table' ).searchable({
+    $( '#table1' ).searchable({
         striped: true,
         oddRow: { 'background-color': '#fff' },
         evenRow: { 'background-color': '#fff' },
@@ -247,7 +247,28 @@
             elem.slideUp( 100 );
         }
     })
-});
+    });
+    
+    $(function () {
+        $( '#table2' ).searchable({
+        striped: true,
+        oddRow: { 'background-color': '#fff' },
+        evenRow: { 'background-color': '#fff' },
+        searchType: 'fuzzy'
+    });
+
+    $( '#searchable-container' ).searchable({
+        searchField: '#container-search',
+        selector: '.row',
+        childSelector: '.col-xs-4',
+        show: function( elem ) {
+            elem.slideDown(100);
+        },
+        hide: function( elem ) {
+            elem.slideUp( 100 );
+        }
+    });
+    });
 </script>
 
 </html>
