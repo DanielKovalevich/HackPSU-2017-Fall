@@ -1,6 +1,5 @@
 $(document).ready(function() {
     getCurrentUserData();
-    getGraphData();
     demo.initDashboardPageCharts();
 
     var d = new Date();
@@ -28,21 +27,6 @@ function getCurrentUserData() {
             for(var i = 0; i < stocks.length; i++) {
                 $('#stock-body').append('<tr><td>' + stocks[i] + '</td><td> TESTING </td><td>' + shares[i] + '</td></tr>');
             }
-        },
-        error: function (req, text_status, error) {
-            console.log('Error: ' + error.message);
-        }
-    });
-}
-
-function getGraphData() {
-    $.ajax({
-        url: "graphData",
-        type: "get",
-        // Manipulate data here.
-        success: function(data) {
-            console.log(data);
-            
         },
         error: function (req, text_status, error) {
             console.log('Error: ' + error.message);
