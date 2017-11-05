@@ -8,7 +8,7 @@ var jsonParser = bodyParser.json();
 router.post('/', jsonParser, function(req, res, next) {
     data = req.body;
     console.log(data);
-    process.env.INVESTED += parseInt(data.amount * data.price);
+    process.env.INVESTED = parseInt(process.env.INVESTED) + parseInt(data.amount * data.price);
     process.env.UNIQUE = (process.env.UNIQUE)++;
     var num = parseInt(process.env.TOTAL_SHARE);
     num += parseInt(data.amount);
