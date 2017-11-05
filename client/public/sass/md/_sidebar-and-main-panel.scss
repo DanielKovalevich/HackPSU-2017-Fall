@@ -247,7 +247,7 @@
 .main-panel{
     .perfect-scrollbar-on &,
     &{
-        overflow: hidden;
+        overflow: auto;
     }
 }
 
