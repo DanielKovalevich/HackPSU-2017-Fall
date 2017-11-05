@@ -33,6 +33,22 @@ function createUser(username, password, FirstName, LastName, email, startingMone
     })
 }
 
+//Treat this as a private function
+function getAccountTotalInternal(uid, callback) {
+
+    var query = "SELECT AvailableMoney, InvestedMoney FROM usertable WHERE (id = " + uid + ");";
+
+    db.get(query, (rows, fields) => {
+        console.log("SQL Response from insert request: " + rows);
+
+        //Send this back to the user somehow
+        var totalAccountBalance = rows[0].AvailableMoney + rows[0].InvestedMoney;
+        callback(totalAccountBalance);
+
+    });
+
+}
+
 
 function getUserByUsername(username, callback) {
 
