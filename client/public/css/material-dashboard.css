@@ -960,6 +960,7 @@ h2.title {
     position: relative;
     padding: 12px 30px;
     margin: 10px 1px;
+    margin-bottom: 1em;
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
