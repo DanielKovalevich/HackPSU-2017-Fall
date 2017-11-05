@@ -1,7 +1,11 @@
 $(document).ready(function() {
     demo.initDashboardPageCharts();
 
-    $("#time").html("<i class=\"material-icons\">access_time</i> " + Date().toString());
-    $("#time2").html(new Date("YYYY-MM").toString());    
+    var d = new Date();
+    
+    var date = d.getMonth().toString() + '/' + d.getDay().toString() + '/' + d.getFullYear().toString();
+
+    $("#time").html("<i class=\"material-icons\">access_time</i> " + new Date().toString() + "");
+    $("#time2").html(date);
     $('.loggout').click(function() {window.location = "./login.html";});
 });
