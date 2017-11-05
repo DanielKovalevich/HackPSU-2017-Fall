@@ -16,15 +16,17 @@ function getCurrentUserData() {
             var total = data.totalShares;
             var invested = data.invested;
 
-            for(var i = 0; i < stocks.length; i++) {
-                var html1 = '<tr><td class="ticker">' + stocks[i] + '</td><td class="price">$10</td><td>$5</td><td>100%</td> <td class="max">' + shares[i] + '</td>'
-                var html2 = '<td>$'+ shares[i] * 10 + '</td><td>$'+ 10 - 5 +'</td></tr>'
-                $('#profile-body').append(html1 + html2);
-            }
-
             $('#invested').html('$' + invested);
             $('#total').html(total);
             $('#start').html('$' + data.starting);
+
+            for(var i = 0; i < stocks.length; i++) {
+                var html1 = '<tr><td class="ticker">' + stocks[i] + '</td><td class="price">$10</td><td>$5</td><td>100%</td> <td class="max">' + shares[i] + '</td>'
+                var html2 = '<td>$'+ shares[i] * 10 + '</td><td>$5</td></tr>'
+                $('#profile-body').append(html1 + html2);
+            }
+
+            
 
         },
         error: function (req, text_status, error) {
