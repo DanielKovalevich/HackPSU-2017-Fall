@@ -6,7 +6,7 @@ var db = require('../public/js/utilities/database');
 router.post('/', function(req, res, next) {
     var query = 'SELECT * FROM usertable WHERE username=' + req.body.username;
     db.get(query, (row, fields) => {
-
+        
     });
 
     process.env.USER_ID = req.body.user_id;
