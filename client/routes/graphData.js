@@ -4,9 +4,8 @@ var router = express.Router();
 var ticker = require('../public/js/utilities/tickerHandler');
 
 /* GET home page. */
-router.post('/', function(req, res, next) {
-    console.log(req);
-    ticker.getHistoricalTickerInformation(req.body.ticker, (history) => {
+router.get('/', function(req, res, next) {
+    ticker.getHistoricalTickerInformation("appl", (history) => {
         var test = {'history': history}
         res.send(test);
     });

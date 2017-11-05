@@ -38,8 +38,7 @@ function getCurrentUserData() {
 function getGraphData() {
     $.ajax({
         url: "graphData",
-        type: "post",
-        data: 'appl',
+        type: "get",
         // Manipulate data here.
         success: function(data) {
             console.log(data);
