@@ -32,4 +32,9 @@ $(window, document, undefined).ready(function() {
   	$(this).removeClass('is-active');
   });
 
+  $('.log').click(function() {
+    var username = $('.username').val();
+    console.log(username);
+  });
+
 });
