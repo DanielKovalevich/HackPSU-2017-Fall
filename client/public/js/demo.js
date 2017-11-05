@@ -4,30 +4,12 @@ type = ['', 'info', 'success', 'warning', 'danger'];
 demo = {
     initDashboardPageCharts: function() {
 
-        /* ---------==========      Prepare the information for the latest stock totals =====--- */
-
-        var historicalArray = [];
-        var historicalList = tickerHandler.getHistoricalTickerInformation('aapl', (data) => {
-
-            console.log(data);
-
-            //We're going to need the first seven, for the first seven days of the week
-            for (i = 0; i <= 7; i++) {
-
-                historicalArray[i] = data[i];
-            }
-
-            console.log(data);
-        /* ----------==========     Daily Sales Chart initialization    ==========---------- */
-
         dataDailySalesChart = {
             labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
             series: [
                 [-12, 17, 7, 17, 23, 18, 38]
             ]
         };
-
-        });
 
         optionsDailySalesChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
