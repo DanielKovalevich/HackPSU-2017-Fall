@@ -11,10 +11,21 @@ app.set('port', 3000);
 //for our static assets
 app.use(express.static(path.join(__dirname, 'public')));
 
-process.env.USER = 1;
+process.env.USER_ID = 1;
+process.env.USERNAME = 'CWeiser';
+process.env.STARTING = 1300;
+process.env.AVALIABLE = 52.53;
+process.env.INVESTED = 847.38;
+process.env.NET_PROFIT = -400.09;
+process.env.UNIQUE = 3;
+process.env.TOTAL_SHARE = 315;
+process.env.STOCKS = ['XXII', 'MU', 'CBR'];
+process.env.STOCK_SHARES = [205, 10, 100];
 
 var example = require('./routes/example');
+var defaultUser = require('./routes/defaultUser');
 app.use('/example', example);
+app.use('/defaultUser', defaultUser);
 
 // Listen for requests
 var server = app.listen(app.get('port'), function () {
