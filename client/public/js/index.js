@@ -1,5 +1,6 @@
 $(document).ready(function() {
     getCurrentUserData();
+    getGraphData();
     demo.initDashboardPageCharts();
 
     var d = new Date();
