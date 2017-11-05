@@ -26,6 +26,8 @@ function getCurrentUserData() {
             }
 
             $('.coffee').html(Math.round(parseInt(invested) / 3));
+            $('.gum').html(Math.round(parseInt(invested) / 1.15));
+            $('.vgames').html(Math.round(parseInt(invested) / 60));
 
         },
         error: function (req, text_status, error) {
