@@ -11,8 +11,12 @@ app.set('port', 3000);
 //for our static assets
 app.use(express.static(path.join(__dirname, 'public')));
 
+process.env.USER = 1;
+
+var example = require('./routes/example');
+app.use('/example', example);
 
 // Listen for requests
 var server = app.listen(app.get('port'), function () {
-  console.log('The server is running on http://localhost:' + app.get('port'));
+    console.log('The server is running on http://localhost:' + app.get('port'));
 });
