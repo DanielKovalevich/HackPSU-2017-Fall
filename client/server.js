@@ -11,6 +11,7 @@ app.set('port', 3000);
 //for our static assets
 app.use(express.static(path.join(__dirname, 'public')));
 
+// creation of first user; just used to populate the data
 process.env.USER_ID = 1;
 process.env.USERNAME = 'CWeiser';
 process.env.STARTING = 1300;
@@ -22,10 +23,13 @@ process.env.TOTAL_SHARE = 315;
 process.env.STOCKS = ['XXII', 'MU', 'CBR'];
 process.env.STOCK_SHARES = [205, 10, 100];
 
+// routing
 var example = require('./routes/example');
 var defaultUser = require('./routes/defaultUser');
+var changeUser = require('./routes/changeUser');
 app.use('/example', example);
 app.use('/defaultUser', defaultUser);
+app.use('/changeUser', changeUser);
 
 // Listen for requests
 var server = app.listen(app.get('port'), function () {
