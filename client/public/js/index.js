@@ -18,9 +18,9 @@ function getCurrentUserData() {
         type: "get",
         // Manipulate data here.
         success: function(data) {
-            console.log(data);
             $('#userTitle').html(data.username);
 
+            console.log(data);
             var stocks = data.stocks.split(",");
             var shares = data.stock_shares.split(",");
 
