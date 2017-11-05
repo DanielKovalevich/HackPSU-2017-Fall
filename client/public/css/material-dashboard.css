@@ -613,6 +613,11 @@ h2.title {
     margin-bottom: 30px;
 }
 
+#whatif {
+  width: 50%;
+  margin-left: 25%;
+}
+
 .description,
 .card-description,
 .footer-big p {
