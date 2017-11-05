@@ -25,7 +25,7 @@ function getCurrentUserData() {
             var shares = data.stock_shares.split(",");
 
             for(var i = 0; i < stocks.length; i++) {
-                $('#stock-body').append('<tr><td>' + stocks[i] + '</td><td> TESTING </td><td>' + shares[i] + '</td></tr>');
+                $('#stock-body').append('<tr><td>' + stocks[i] + '</td><td> MARKET CLOSED </td><td>' + shares[i] + '</td></tr>');
             }
         },
         error: function (req, text_status, error) {
