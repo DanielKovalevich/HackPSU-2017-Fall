@@ -25,7 +25,7 @@ function getCurrentUserData() {
                 $('#profile-body').append(html1 + html2);
             }
 
-            
+            $('.coffee').html(Math.round(parseInt(invested) / 3));
 
         },
         error: function (req, text_status, error) {
