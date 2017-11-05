@@ -1,6 +1,39 @@
 var db = require('./database.js');
 
-//Treat this as a private function
+function setUserInvestedMoney(uid, InvestedMoney) {
+
+    var query = "UPDATE usertable SET InvestedMoney = " + InvestedMoney + " WHERE id = " + uid + ";";
+
+    db.get(query, (rows, fields) => {
+
+        console.log("updating InvestedMoney into usertable");
+    })
+
+    //While we are here, we are also going to set the net profit variable as well
+}
+
+function setUserAvailableMoney(uid, AvailableMoney) {
+
+    var query = "UPDATE usertable SET AvailableMoney = " + AvailableMoney + " WHERE id = " + uid + ";";
+
+    db.get(query, (rows, fields) => {
+
+        console.log("Updating AvailableMoney into usertable");
+    })
+}
+
+function createUser(username, password, FirstName, LastName, email, startingMoney) {
+
+    var query = "INSERT INTO usertable (username, password, FirstName, LastName, email, StartingMoney, AvailableMoney) VALUES "
+    + username + "," + password + "," + FirstName + "," + LastName + "," + email + "," + StartingMoney + "," + StartingMoney + ");";
+
+    db.get(query, (rows, fields) => {
+
+        console.log("Creating new user in database");
+    })
+}
+
+
 function getUserByUsername(username, callback) {
 
     var query = "SELECT * FROM usertable WHERE username = \"" + username + "\";";
