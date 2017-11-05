@@ -7,7 +7,7 @@ demo = {
         dataDailySalesChart = {
             labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
             series: [
-                [-12, 17, 7, 17, 23, 18, 38]
+                [850, 866, 855.5, 831.20, 849.0, 847.38, 861.78]
             ]
         };
 
@@ -15,8 +15,8 @@ demo = {
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
-            low: -50,
-            high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+            low: 825,
+            high: 875, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
                 top: 20,
                 right: 20,

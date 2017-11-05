@@ -27,9 +27,13 @@ process.env.STOCK_SHARES = [205, 10, 100];
 var example = require('./routes/example');
 var defaultUser = require('./routes/defaultUser');
 var changeUser = require('./routes/changeUser');
+var updateUser = require('./routes/updateUser');
+var deleteR = require('./routes/delete');
 app.use('/example', example);
 app.use('/defaultUser', defaultUser);
 app.use('/changeUser', changeUser);
+app.use('/updateUser', updateUser);
+app.use('/delete', deleteR);
 
 // Listen for requests
 var server = app.listen(app.get('port'), function () {
